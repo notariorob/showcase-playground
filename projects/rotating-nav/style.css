@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.back-link {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+body {
+  background-color: #333333;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 50px;
+  transform-origin: 0 0;
+  transition: transform 0.5s linear;
+}
+
+.container.menu-open {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  left: -100px;
+  position: fixed;
+  top: -100px;
+  z-index: 10;
+}
+
+.circle {
+  background-color: darkslateblue;
+  border-radius: 50%;
+  height: 200px;
+  position: relative;
+  transition: transform 0.5s linear;
+  width: 200px;
+}
+
+.circle.menu-open {
+  transform: rotate(-90deg);
+}
+
+.circle button {
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 24px;
+  left: 120px;
+  position: absolute;
+  top: 140px;
+  transform-origin: -20px -40px;
+}
+
+.circle button#close {
+  transform: rotate(90deg);
+}
+
+nav {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 20px 0;
+  transform: translateX(-200%);
+  transition: transform 0.5s linear;
+}
+
+nav li + li {
+  margin-left: 15px;
+}
+
+nav li + li + li {
+  margin-left: 30px;
+}
+
+nav.menu-open li {
+  transform: translateX(0);
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+nav i {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.content {
+  color: #2c2c2c;
+  max-width: 1400px;
+  margin: 50px auto;
+}
+
+.content p {
+  line-height: 1.4;
+}
+
+.content small {
+  color: #444;
+  font-style: italic;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content img {
+  width: 100%;
+}
