@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+.back-link {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
 body {
   align-items: center;
   display: flex;
